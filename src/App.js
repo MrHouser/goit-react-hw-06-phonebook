@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import shortid from 'shortid';
-import Form from './Form/Form';
-import Contacts from './Contacts/Contacts';
-import Search from './Search/Search';
+import Form from './components/Form/Form';
+import Contacts from './components/Contacts/Contacts';
+import Search from './components/Search/Search';
 
 function App() {
   const [contacts, setContacts] = useState([

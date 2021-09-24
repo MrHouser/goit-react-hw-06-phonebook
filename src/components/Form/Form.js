@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as Toastr from 'toastr';
-import '../../node_modules/toastr/build/toastr.css';
+import '../../../node_modules/toastr/build/toastr.css';
 import s from './Form.module.css';
 
 function Form({ onSubmit, contactList }) {

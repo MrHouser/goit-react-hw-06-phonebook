@@ -4,6 +4,7 @@ import s from './Search.module.css';
 function Search({ value, onSearch }) {
   return (
     <label className={s.label}>
+      {' '}
       Find contacts by name:
       <input
         type="text"
