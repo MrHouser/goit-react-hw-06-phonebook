@@ -2,7 +2,7 @@ import s from './Contacts.module.css';
 import PropTypes from 'prop-types';
 import Contact from './Contact';
 
-function Contacts({ contacts, onDelete }) {
+function Contacts({ contacts }) {
   return (
     <ul className={s.list}>
       {contacts.map(contact => (
@@ -11,7 +11,6 @@ function Contacts({ contacts, onDelete }) {
           id={contact.id}
           name={contact.name}
           number={contact.number}
-          onDelete={onDelete}
         />
       ))}
     </ul>

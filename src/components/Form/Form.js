@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as Toastr from 'toastr';
 import * as actions from '../../redux/actions';
 import '../../../node_modules/toastr/build/toastr.css';
 import s from './Form.module.css';
 
-function Form({ onSubmit, contactList }) {
+function Form({ contactList }) {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -36,7 +36,6 @@ function Form({ onSubmit, contactList }) {
       reset();
       return;
     }
-    // onSubmit({ name, number });
     dispatch(actions.addContact({ name, number }));
     reset();
   };
@@ -45,7 +44,6 @@ function Form({ onSubmit, contactList }) {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          {' '}
           Name:
           <input
             type="text"
@@ -59,7 +57,6 @@ function Form({ onSubmit, contactList }) {
           />
         </label>
         <label>
-          {' '}
           Number:
           <input
             type="tel"
